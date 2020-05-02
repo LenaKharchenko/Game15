@@ -12,20 +12,32 @@ namespace Game15
 {
     public partial class FormGame15 : Form
     {
+        Game game;
         public FormGame15()
         {
             InitializeComponent();
+            game = new Game(4);
         }
 
         private void FormGame15_Load(object sender, EventArgs e)
         {
-
+            StartGame();
+        }
+        private void menu_start_Click(object sender, EventArgs e)
+        {
+            StartGame();
         }
 
         private void button15_Click(object sender, EventArgs e)
         {
             int position = Convert.ToInt16(((Button)sender).Tag);
-            ButtonPosition(position).Text = position.ToString();
+            game.Shift(position);
+            Refresh();
+            if (game.CheckNumbers())
+            {
+                MessageBox.Show("Вы победили!");
+                StartGame();
+            }
         }
         private Button ButtonPosition (int position)
         {
@@ -48,6 +60,24 @@ namespace Game15
                 case 14: return button14;
                 case 15: return button15;
                 default: return null;
+            }
+        }
+
+        
+        private void StartGame()
+        { 
+            game.Start();
+            for (int j = 0; j < 3; j++)
+                game.ShiftRandom();
+            Refresh();
+        }
+        private void Refresh()
+        {
+            for (int position = 0; position < 16; position++)
+            {
+                int nr = game.GetNumber(position);
+                ButtonPosition(position).Text = nr.ToString();
+                ButtonPosition(position).Visible = (nr > 0);
             }
         }
     }
