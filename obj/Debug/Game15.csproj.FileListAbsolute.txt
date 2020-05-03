@@ -1,0 +1,9 @@
+c:\users\asus4\documents\visual studio 2015\Projects\Game15\Game15\bin\Debug\Game15.exe.config
+c:\users\asus4\documents\visual studio 2015\Projects\Game15\Game15\bin\Debug\Game15.exe
+c:\users\asus4\documents\visual studio 2015\Projects\Game15\Game15\bin\Debug\Game15.pdb
+c:\users\asus4\documents\visual studio 2015\Projects\Game15\Game15\obj\Debug\Game15.csprojResolveAssemblyReference.cache
+c:\users\asus4\documents\visual studio 2015\Projects\Game15\Game15\obj\Debug\Game15.FormGame15.resources
+c:\users\asus4\documents\visual studio 2015\Projects\Game15\Game15\obj\Debug\Game15.Properties.Resources.resources
+c:\users\asus4\documents\visual studio 2015\Projects\Game15\Game15\obj\Debug\Game15.csproj.GenerateResource.Cache
+c:\users\asus4\documents\visual studio 2015\Projects\Game15\Game15\obj\Debug\Game15.exe
+c:\users\asus4\documents\visual studio 2015\Projects\Game15\Game15\obj\Debug\Game15.pdb

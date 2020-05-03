@@ -12,11 +12,10 @@ namespace Game15
 {
     public partial class FormGame15 : Form
     {
-        Game game;
+        Game game = new Game();
         public FormGame15()
         {
-            InitializeComponent();
-            game = new Game(4);
+            InitializeComponent();            
         }
 
         private void FormGame15_Load(object sender, EventArgs e)
@@ -31,11 +30,13 @@ namespace Game15
         private void button15_Click(object sender, EventArgs e)
         {
             int position = Convert.ToInt16(((Button)sender).Tag);
+            game.CountSteps();
             game.Shift(position);
             Refresh();
             if (game.CheckNumbers())
             {
-                MessageBox.Show("Вы победили!");
+                MessageBox.Show("Поздравляем! Вы победили!\nКоличество шагов: " + game.CountSteps().ToString());
+                game.RefreshCount();
                 StartGame();
             }
         }
@@ -67,7 +68,7 @@ namespace Game15
         private void StartGame()
         { 
             game.Start();
-            for (int j = 0; j < 3; j++)
+            for (int j = 0; j < 100; j++)
                 game.ShiftRandom();
             Refresh();
         }

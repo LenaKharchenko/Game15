@@ -316,9 +316,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(714, 536);
             this.Controls.Add(this.tableLayoutPanel);
             this.Controls.Add(this.menu);
+            this.ForeColor = System.Drawing.SystemColors.MenuText;
             this.MainMenuStrip = this.menu;
             this.Name = "FormGame15";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
