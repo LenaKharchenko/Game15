@@ -1,3 +1,3 @@
 # Game15
 Game 15/Пятнашки
-Training project windows form application.
+Training project windows forms application.
